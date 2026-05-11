@@ -4,15 +4,12 @@ body{
     font-weight: 100;
     color: #8e94bc;
     margin-left: 80px;
+    margin-top: 100px;
+    margin-right: 80px;
 }
 
 .sub-heading {
-    font-family: Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight: 100;
-    color: #8e94bc;
-    margin-left: 80px;
-    margin-top: 100px;
+    font-size: 50px;
 }
 
 .floating-nav-bar {
@@ -38,95 +35,32 @@ nav a {
     transition: color 0.3s;
 }
 
-body{
-    overflow:hidden;
+
+.card-header {
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 1rem;
+
+  width: 100%;
 }
 
-.flipbook-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-}
+.card {
+  padding: 1.5rem;
 
-#flipbook{
-    width:400px;
-    height:300px;
-}
+  background: rgba(163, 162, 162, 0.2);
 
-#flipbook .page{
-    width:400px;
-    height:300px;
-}
+  border: 1px solid rgba(255,255,255,0.08);
 
-#flipbook .page-wrapper{
-    -webkit-perspective:2000px;
-    -moz-perspective:2000px;
-    -ms-perspective:2000px;
-    -o-perspective:2000px;
-    perspective:2000px;
-}
+  border-radius: 20px;
 
-#flipbook .hard{
-    background:#111111 !important;
-    color:#151515;
-    -webkit-box-shadow:inset 0 0 5px #666;
-    -moz-box-shadow:inset 0 0 5px #666;
-    -o-box-shadow:inset 0 0 5px #666;
-    -ms-box-shadow:inset 0 0 5px #666;
-    box-shadow:inset 0 0 5px #666;
-    font-weight:bold;
-}
-
-#flipbook .odd{
-    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));
-    background-image:-webkit-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
-    background-image:-moz-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
-    background-image:-ms-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
-    background-image:-o-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
-    background-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);
-    -webkit-box-shadow:inset 0 0 5px #666;
-    -moz-box-shadow:inset 0 0 5px #666;
-    -o-box-shadow:inset 0 0 5px #666;
-    -ms-box-shadow:inset 0 0 5px #666;
-    box-shadow:inset 0 0 5px #666;
-    
-}
-
-#flipbook .even{
-    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
-    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
-    -webkit-box-shadow:inset 0 0 5px #666;
-    -moz-box-shadow:inset 0 0 5px #666;
-    -o-box-shadow:inset 0 0 5px #666;
-    -ms-box-shadow:inset 0 0 5px #666;
-    box-shadow:inset 0 0 5px #666;
-}
-
-#flipbook .page {
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Crucial for cropping */
-    position: relative;
-}
-#flipbook .page img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Crops image to fill page */
-}
-
-.caption {
-    position: absolute;
-    font-size:small;
-    bottom: 10px;
-    margin-right: 0px;
-    color: #232b52;
-    background: rgba(198, 197, 190, 0.8);
-    width: max-content;
-    padding: 0px;
-    float: right;
-    font-family: Arial, sans-serif;
+  backdrop-filter: blur(10px);
 }
